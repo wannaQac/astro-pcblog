@@ -3,7 +3,7 @@ import type { PostModel } from '@interfaces/post-model'
 
 // index
 
-export const title = 'didmax'
+export const title = '垃圾佬小宋'
 
 export const description = '这是一个托管在 Cloudflare 上的个人博客，用于记录生活和技术笔记。'
 
