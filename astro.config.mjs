@@ -13,7 +13,8 @@ import remarkRehype from 'remark-rehype'
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://astro-blog-ecru-phi.vercel.app',
+  site: 'https://wannaqac.github.io/',
+  base: '/astro-pcblog',
   prefetch: {
     prefetchAll: true,
   },
