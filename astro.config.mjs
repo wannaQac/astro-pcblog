@@ -14,7 +14,7 @@ import remarkRehype from 'remark-rehype'
 // https://astro.build/config
 export default defineConfig({
   site: 'https://wannaqac.github.io/',
-  base: '/astro-pcblog',
+  //base: '/astro-pcblog',
   prefetch: {
     prefetchAll: true,
   },
