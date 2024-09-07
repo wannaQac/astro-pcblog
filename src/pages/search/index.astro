@@ -1,0 +1,21 @@
+---
+import PagefindSearch from '@components/basic/pagefind-search.astro'
+import NavHeader from '@components/nav-header.astro'
+import BaseLayout from '@layouts/base-layout.astro'
+---
+
+<BaseLayout title="搜索" description="search page">
+  <NavHeader />
+  <main class="flex flex-col justify-between overflow-hidden">
+    <PagefindSearch />
+  </main>
+</BaseLayout>
+<style lang="less">
+  main {
+    height: calc(100dvh - 100px);
+    overflow: hidden;
+    @media screen and (min-width: 1500px) {
+      height: calc(100dvh - 120px);
+    }
+  }
+</style>

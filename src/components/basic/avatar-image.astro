@@ -1,0 +1,40 @@
+---
+import { avatar } from '@constant'
+import { Image } from 'astro:assets'
+---
+
+<Image
+  src={avatar}
+  loading="eager"
+  alt=""
+  class="avatar my-5 aspect-square w-[100px] cursor-pointer select-none rounded-full transition-all"
+/>
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const avatar = document.querySelector('.avatar')
+
+    avatar?.addEventListener('mouseenter', () => {
+      avatar.classList.add('rotate-[360deg]')
+    })
+
+    avatar?.addEventListener('mouseleave', () => {
+      avatar.classList.remove('rotate-[360deg]')
+    })
+
+    avatar?.addEventListener(
+      'touchstart',
+      () => {
+        avatar.classList.add('rotate-[360deg]')
+      },
+      { passive: true },
+    )
+
+    avatar?.addEventListener(
+      'touchend',
+      () => {
+        avatar.classList.remove('rotate-[360deg]')
+      },
+      { passive: true },
+    )
+  })
+</script>

@@ -1,0 +1,20 @@
+---
+import AvatarImage from '@components/basic/avatar-image.astro'
+import NavLink from '@components/basic/nav-link.astro'
+import BaseLayout from '@layouts/base-layout.astro'
+
+const title = '404 Not Found'
+const description = '找不到页面-didmax'
+---
+
+<BaseLayout title={title} description={description}>
+  <main>
+    <section class="flex flex-col items-center justify-center">
+      <AvatarImage />
+    </section>
+    <section class="my-10 flex items-center justify-center gap-10 text-primary">
+      <NavLink />
+    </section>
+    <section class="flex justify-center py-5 text-4xl">404</section>
+  </main>
+</BaseLayout>

@@ -1,0 +1,37 @@
+---
+import FastNav from '@components/basic/fast-nav.astro'
+import ContentRender from '@components/content-render.astro'
+import NavHead from '@components/nav-header.astro'
+import PostPagination from '@components/post-pagination.astro'
+import type { PostModel } from '@interfaces/post-model'
+import BaseLayout from '@layouts/base-layout.astro'
+import { getAllPosts } from '@utils/all-posts'
+
+interface Props {
+  post: PostModel
+  prev: PostModel | undefined
+  next: PostModel | undefined
+}
+
+export async function getStaticPaths() {
+  const posts = await getAllPosts()
+  return posts.map((post, index) => ({
+    params: { slug: post.data.abbrlink },
+    props: { post, prev: posts[index - 1], next: posts[index + 1] },
+  }))
+}
+
+const { post, prev, next } = Astro.props
+---
+
+<BaseLayout title={post.data.title} description={post.data.description ?? ''} cover={post.data.cover}>
+  <NavHead />
+  <main class="flex flex-col justify-between">
+    <div data-pagefind-body class="rounded-lg border p-5 dark:border-primary-gray max-[768px]:p-3">
+      <ContentRender post={post} />
+    </div>
+
+    <PostPagination prev={prev} next={next} />
+    <FastNav />
+  </main>
+</BaseLayout>

@@ -1,0 +1,22 @@
+---
+import NavLink from './basic/nav-link.astro'
+---
+
+<header
+  class="sticky top-0 z-10 flex h-[100px] items-center justify-end backdrop-blur-sm dark:bg-primary-dark dark:bg-opacity-95 min-[1500px]:h-[120px]"
+>
+  <NavLink />
+</header>
+<style lang="less" is:global>
+  header nav ul {
+    @media screen and (min-width: 768px) {
+      justify-content: flex-start !important;
+      gap: 2.5rem;
+
+      li:last-child {
+        position: absolute;
+        right: 2rem;
+      }
+    }
+  }
+</style>
