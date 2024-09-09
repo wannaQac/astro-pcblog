@@ -1,0 +1,45 @@
+---
+title: Windows系统安装教程
+abbrlink: easywindow2f
+date: 2024-09-09T15:18:51.000Z
+description: 系统安装教程
+tags:
+  - 装机教程
+---
+
+import { Image } from 'astro:assets'
+import udiskhelper from '@images/win11isocreator/udiskhelper.png'
+import selectdisk from '@images/win11isocreator/selectdisk.png'
+import usedisk from '@images/win11isocreator/usedisk.png'
+import waitdownload from '@images/win11isocreator/waitdownload.png'
+
+## 1.简介
+本教程是 `Windows` 系统安装教程，推荐使用正统的 `Windows` 系统安装方式：微软官方工具创建引导U盘
+
+## 2.准备
+* 一个U盘（≥8GB）
+* 一个联网，可以读写USB设备的电脑
+
+
+## 3.官方工具一键创建引导U盘
+
+### 3.1下载官方工具
+[win11创建工具链接](https://www.microsoft.com/zh-cn/software-download/windows11)
+
+[win10创建工具链接](https://www.microsoft.com/zh-cn/software-download/windows10)
+
+<Image src={udiskhelper} alt="udiskhelper" loading="eager" />
+
+### 3.2执行exe文件
+
+执行文件名类似于 `MediaCreationTool_Win11_23H2.exe`
+
+选择介质
+<Image src={selectdisk} alt="selectdisk" loading="eager" />
+选择U盘
+<Image src={usedisk} alt="usedisk" loading="eager" />
+等待下载完成
+<Image src={waitdownload} alt="waitdownload" loading="eager" />
+
+## 4.安装系统
+开机后狂按快捷键进入 Boot 菜单，具体快捷键可自行网上搜索，华硕为 `F8` 或 `DEL`
