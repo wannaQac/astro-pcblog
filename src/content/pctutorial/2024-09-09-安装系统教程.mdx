@@ -12,6 +12,9 @@ import udiskhelper from '@images/win11isocreator/udiskhelper.png'
 import selectdisk from '@images/win11isocreator/selectdisk.png'
 import usedisk from '@images/win11isocreator/usedisk.png'
 import waitdownload from '@images/win11isocreator/waitdownload.png'
+import logo from '@images/win11isocreator/logo.png'
+import ezmode from '@images/win11isocreator/ezmode.png'
+import selectboot from '@images/win11isocreator/selectboot.png'
 
 ## 1.简介
 本教程是 `Windows` 系统安装教程，推荐使用正统的 `Windows` 系统安装方式：微软官方工具创建引导U盘
@@ -32,7 +35,7 @@ import waitdownload from '@images/win11isocreator/waitdownload.png'
 
 ### 3.2执行exe文件
 
-执行文件名类似于 `MediaCreationTool_Win11_23H2.exe`
+执行文件名类似于 `MediaCreationTool_Win11_23H2.exe` 的可执行程序
 
 选择介质
 <Image src={selectdisk} alt="selectdisk" loading="eager" />
@@ -42,4 +45,19 @@ import waitdownload from '@images/win11isocreator/waitdownload.png'
 <Image src={waitdownload} alt="waitdownload" loading="eager" />
 
 ## 4.安装系统
-开机后狂按快捷键进入 Boot 菜单，具体快捷键可自行网上搜索，华硕为 `F8` 或 `DEL`
+插入制作好的系统盘，开机后狂按快捷键进入 `Boot` 菜单，具体快捷键可自行网上搜索，我这张 `华硕B650M GAMING PLUS WIFI` 为 `F2 或 DEL`
+，设置启动优先顺序第一位为 `UEFI:XXXX`（图片中为 `UEFI:Generic Flash ...`）
+
+开机logo
+<Image src={logo} alt="logo" loading="eager" />
+简单模式
+<Image src={ezmode} alt="ezmode" loading="eager" />
+高级模式
+<Image src={selectboot} alt="selectboot" loading="eager" />
+完成设置后按 `F10` 保存并退出，系统会自动重启然后进入 `Windows` 安装程序
+
+## 5. 安装Windows
+
+* 系统推荐选择专业版
+* 安装类型选择 自定义：仅安装 Windows（高级）（C）
+* 选择目标硬盘后开始安装，安装完成后会自动重启，安装完成后即可拔出U盘（也可以不拔）
