@@ -41,9 +41,16 @@ const { Content } = await post.render()
 
 <style lang="less" is:global>
   table {
+    width: 100%;
     border-collapse: separate !important;
     border-spacing: 0.5rem !important;
   }
+
+  @media only screen and (max-width: 600px) {
+    table {
+        border-spacing: 0.1rem !important;
+    }
+}
   
   article {
     pre {
